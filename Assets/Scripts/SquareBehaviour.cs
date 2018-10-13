@@ -1,13 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SquareBehaviour : MonoBehaviour
 {
     public bool Dead;
-    public PlayerController owner;
     
     public List<Sprite> healthLevels;
+
+    public UnityEvent SquareDied;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,11 +23,12 @@ public class SquareBehaviour : MonoBehaviour
             }
             else
             {
+                SquareDied.Invoke();
                 GetComponentInChildren<SpriteRenderer>().sprite = null;                
             }
 
             Destroy(other.gameObject);
-
+            ScreenShake.magnitude = 1.0f;
         }
         else
         {

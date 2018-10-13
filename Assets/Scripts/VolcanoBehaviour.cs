@@ -21,7 +21,7 @@ public class VolcanoBehaviour : MonoBehaviour
 
     private void Start()
     {
-        _time = 10.0f;
+        _time = 5.0f;
     }
     
     // Update is called once per frame
@@ -30,6 +30,8 @@ public class VolcanoBehaviour : MonoBehaviour
         _time -= Time.deltaTime;
         if (!(_time <= 0)) return;
 
+        ScreenShake.magnitude = 0.5f;
+        
         _time = Random.Range(MinTime, MaxTime);
 
         Vector2 off = Vector2.up + Vector2.right * Random.Range(-Spread, Spread);
