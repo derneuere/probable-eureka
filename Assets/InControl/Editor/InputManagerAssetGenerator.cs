@@ -23,7 +23,7 @@ namespace InControl
 		}
 
 
-		[MenuItem( "Edit/Project Settings/" + productName + "/Setup InputManager Settings" )]
+		[MenuItem( "Tools/InControl/" + productName + "/Setup InputManager Settings" )]
 		static void GenerateInputManagerAsset()
 		{
 			ApplyAxisPresets();
@@ -31,7 +31,7 @@ namespace InControl
 		}
 
 
-		[MenuItem( "Edit/Project Settings/" + productName + "/Check InputManager Settings" )]
+		[MenuItem( "Tools/InControl/" + productName + "/Check InputManager Settings" )]
 		static void CheckInputManagerAsset()
 		{
 			if (CheckAxisPresets())
