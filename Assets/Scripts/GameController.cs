@@ -5,8 +5,9 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
-        distributePlayers();
+	private void Start () 
+	{
+        DistributePlayers();
 	}
 	
 	// Update is called once per frame
@@ -17,8 +18,9 @@ public class GameController : MonoBehaviour {
     /**
      * Randomly distribute players to countries 
      **/
-    void distributePlayers()
+	private void DistributePlayers()
     {
+	    /*
         var players = new List<PlayerController>(FindObjectsOfType<PlayerController>());
         var countries = new List<Country>(FindObjectsOfType<Country>());
 
@@ -39,5 +41,6 @@ public class GameController : MonoBehaviour {
             players.RemoveAt(0);
             countries.RemoveAt(countryIndex);
         }
+        */
     }
 }

@@ -14,20 +14,16 @@ public class PlayerController : MonoBehaviour {
     public bool actionX = false;
     public bool actionY = false;
 
-    public Country _homeCountry;        // Player's home Country
-    public Country _currentCountry;     // Country that the player is currently above
-    private Country _lastCountry;     // Country that the player is currently above
-
-
+    
     private InputDevice _userDevice;
     private PlayerActions _playerActions;
 
-    private Rigidbody rb;
+    private Rigidbody2D _rb;
 
 	// Use this for initialization
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     public void bindGamepad(InputDevice device)
@@ -47,25 +43,25 @@ public class PlayerController : MonoBehaviour {
     {
         if (_playerActions == null) return;
 
-        float moveHorizontal = _playerActions.Move.X;
-        float moveVertical = _playerActions.Move.Y;
+        var moveHorizontal = _playerActions.Move.X;
+        var moveVertical = _playerActions.Move.Y;
         x = moveHorizontal;
         y = moveVertical;
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-        rb.AddForce(movement * _speed);
+        Vector3 movement = new Vector2(moveHorizontal, moveVertical);
+        
+        _rb.AddForce(movement * _speed);
 
         // Check actions
         actionA = _playerActions.ActionA.IsPressed;
         actionB = _playerActions.ActionB.IsPressed;
         actionX = _playerActions.ActionX.IsPressed;
         actionY = _playerActions.ActionY.IsPressed;
-
-        updateCurrentCountry();
     }
 
     private void updateCurrentCountry()
     {
+        /*
         _currentCountry = null;
 
         var layerMask = LayerMask.GetMask("Countries");
@@ -95,15 +91,7 @@ public class PlayerController : MonoBehaviour {
                 _lastCountry = null;
             }
         }
+        */
     }
 
-    private void onEnteredCountry(Country oldCountry, Country newCountry)
-    {
-        Debug.Log("Player Entered Country");
-    }
-
-    private void onExitedCountry(Country oldCountry)
-    {
-        Debug.Log("Player Exited Country)");
-    }
 }
