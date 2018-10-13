@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using InControl;
@@ -50,13 +51,18 @@ public class PlayerController : MonoBehaviour {
 
         Vector3 movement = new Vector2(moveHorizontal, moveVertical);
         
-        _rb.AddForce(movement * _speed);
+        _rb.AddForce(movement * _speed * Oscillator());
 
         // Check actions
         actionA = _playerActions.ActionA.IsPressed;
         actionB = _playerActions.ActionB.IsPressed;
         actionX = _playerActions.ActionX.IsPressed;
         actionY = _playerActions.ActionY.IsPressed;
+    }
+
+    private float Oscillator()
+    {
+        return 0.7f + Mathf.Sin(Time.time * 2.0f * 2.0f * Mathf.PI);
     }
 
     private void updateCurrentCountry()
