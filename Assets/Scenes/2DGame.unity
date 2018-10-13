@@ -1364,8 +1364,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BubblePrefabs:
   - {fileID: 3160297679824015025, guid: 9dec243597d17204a90b7198bfab57b7, type: 3}
-  BubbleMinTime: 0.1
-  BubbleMaxTime: 0.2
+  BubbleMinTime: 0.2
+  BubbleMaxTime: 0.3
 --- !u!1 &1102725096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,8 +1684,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BubblePrefabs:
   - {fileID: 3160297679824015025, guid: 9dec243597d17204a90b7198bfab57b7, type: 3}
-  BubbleMinTime: 0.1
-  BubbleMaxTime: 0.2
+  BubbleMinTime: 0.2
+  BubbleMaxTime: 0.3
 --- !u!1 &1814838194
 GameObject:
   m_ObjectHideFlags: 0

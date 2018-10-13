@@ -42,9 +42,9 @@ public class BubbleSpawner : MonoBehaviour
 
     private void OnDestroy()
     {
-        for (var i = 0; i < 20; i++)
+        for (var i = 0; i < 40; i++)
         {
-            SpawnBubble(Random.insideUnitCircle);
+            SpawnBubble(Random.insideUnitCircle * 2.0f);
         }
     }
 }

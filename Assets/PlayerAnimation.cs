@@ -30,6 +30,6 @@ public class PlayerAnimation : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        _animator.SetTrigger("Pulse");
+        if (other.gameObject.CompareTag("Blob") || other.gameObject.CompareTag("Player"))  _animator.SetTrigger("Pulse");
     }
 }
