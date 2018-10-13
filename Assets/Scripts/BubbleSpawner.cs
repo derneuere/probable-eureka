@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LavaBlobBehaviour : MonoBehaviour
+public class BubbleSpawner : MonoBehaviour
 {
     public GameObject[] BubblePrefabs;
 

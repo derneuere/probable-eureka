@@ -189,6 +189,7 @@ Transform:
   - {fileID: 584338848}
   - {fileID: 5370298557055283726}
   - {fileID: 7369528410156448123}
+  - {fileID: 5999453319149239815}
   m_Father: {fileID: 9012739951501950899}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -299,8 +300,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5999453319149239815}
-  - component: {fileID: 6742981907424978654}
   - component: {fileID: 1985561150478276551}
+  - component: {fileID: 3713678460321127411}
   m_Layer: 4
   m_Name: BubbleRepulser
   m_TagString: Untagged
@@ -319,29 +320,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 9012739951501950899}
-  m_RootOrder: 1
+  m_Father: {fileID: 1883301332183760311}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!250 &6742981907424978654
-PointEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8788176960739951639}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4096
-  m_ForceMagnitude: -5
-  m_ForceVariation: 2
-  m_DistanceScale: 2
-  m_ForceSource: 0
-  m_ForceTarget: 0
-  m_ForceMode: 1
-  m_Drag: 0
-  m_AngularDrag: 0
 --- !u!58 &1985561150478276551
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -357,7 +338,27 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 2
+--- !u!249 &3713678460321127411
+AreaEffector2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8788176960739951639}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4096
+  m_UseGlobalAngle: 0
+  m_ForceAngle: 90
+  m_ForceMagnitude: -2
+  m_ForceVariation: -2
+  m_ForceTarget: 0
+  m_Drag: 0
+  m_AngularDrag: 0
 --- !u!1 &9012739951501950898
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +391,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1883301332183760311}
-  - {fileID: 5999453319149239815}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
