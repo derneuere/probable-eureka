@@ -21,7 +21,7 @@ public class VolcanoBehaviour : MonoBehaviour
 
     private void Start()
     {
-        _time = MinTime;
+        _time = 10.0f;
     }
     
     // Update is called once per frame

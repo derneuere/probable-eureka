@@ -11,12 +11,6 @@ public class BubbleSpawner : MonoBehaviour
 
     private float _time;
     
-    // Start is called before the first frame update
-    private void Start()
-    {
-        GetComponent<Animator>().speed = Random.Range(0.5f, 2.0f);
-    }
-
     // Update is called once per frame
     private void Update()
     {
