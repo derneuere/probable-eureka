@@ -140,4 +140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da93cfda086f60940a5ac5f42bad7545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dead: 0
+  Dead: 0
+  corpses:
+  - {fileID: 21300000, guid: c3b0505aa2fb8ef4d8a34cf0c2306560, type: 3}
+  - {fileID: 21300000, guid: 0af5952f0f771104b8e6ca041efb6e1f, type: 3}
+  - {fileID: 21300000, guid: 2bb762d0c80fddc43a81c75f0b0dc25e, type: 3}
+  - {fileID: 21300000, guid: cb74cb782b90a694e9fcb7723d822618, type: 3}
