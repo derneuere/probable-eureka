@@ -13,6 +13,7 @@ public class StartWhenReady : MonoBehaviour
         if (pc._unassignedPlayers.Count == 0)
         {
             volcano.enabled = true;
+            GetComponent<AudioSource>().Play();
             Destroy(this);
         }
     }

@@ -8,7 +8,7 @@ public class PlayerScoreBehaviour : MonoBehaviour
 {
     public SquareBehaviour[] squares;
     public TextMeshPro score;
-    private int lives;
+    public int lives;
     
     private void Start()
     {
@@ -26,9 +26,17 @@ public class PlayerScoreBehaviour : MonoBehaviour
     {
         lives--;
 
-        StringBuilder s = new StringBuilder();
+        if (lives > 0)
+        {
+            StringBuilder s = new StringBuilder();
 
-        for (var i = 0; i < lives; i++) s.Append("X");
-        score.text = s.ToString();
+            for (var i = 0; i < lives; i++) s.Append("X");
+            score.text = s.ToString();            
+        }
+        else
+        {
+            score.text = "Haha!\nYour floor\nis LAVA!";
+        }
+        
     }
 }

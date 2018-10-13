@@ -11,7 +11,7 @@ public class ScreenShake : MonoBehaviour
     public static float magnitude;
     
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         cam.transform.localPosition = Random.insideUnitCircle * magnitude * amplitude;
         magnitude = Filter.FIR(magnitude, 0);

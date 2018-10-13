@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Policy;
 using UnityEngine;
 using InControl;
 
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour {
 
     public Transform View;
 
+    private float cooldown;
     
     private InputDevice _userDevice;
     public PlayerActions PlayerActions;
@@ -59,11 +61,21 @@ public class PlayerController : MonoBehaviour {
         _rb.AddForce(movement * _speed * Oscillator());
 
         // Check actions
-        actionA = PlayerActions.ActionA.IsPressed;
-        actionB = PlayerActions.ActionB.IsPressed;
-        actionX = PlayerActions.ActionX.IsPressed;
-        actionY = PlayerActions.ActionY.IsPressed;
+        actionA = PlayerActions.ActionA.WasPressed;
+        actionB = PlayerActions.ActionB.WasPressed;
+        actionX = PlayerActions.ActionX.WasPressed;
+        actionY = PlayerActions.ActionY.WasPressed;
 
+        //Dash:
+        if (actionA)
+        {
+            if (Time.time - cooldown > 3.0f)
+            {
+                cooldown = Time.time;
+                _rb.AddForce(View.transform.up* 3.0f, ForceMode2D.Impulse);                
+            }
+        }
+        
         //Does this work?
         if (movement.magnitude > 0.1f)
         {

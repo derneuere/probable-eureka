@@ -6,6 +6,6 @@ public class MagmaBehaviour : MonoBehaviour
 {
    private void OnTriggerEnter2D(Collider2D other)
    {
-      other.gameObject.SetActive(false);
+      Destroy(other.gameObject);
    }
 }

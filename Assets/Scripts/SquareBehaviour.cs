@@ -28,6 +28,8 @@ public class SquareBehaviour : MonoBehaviour
             }
 
             Destroy(other.gameObject);
+            
+            other.GetComponent<BubbleSpawner>().Explode();
             ScreenShake.magnitude = 1.0f;
         }
         else

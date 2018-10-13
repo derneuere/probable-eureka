@@ -9,8 +9,10 @@ public class BubbleSpawner : MonoBehaviour
     public float BubbleMinTime = 0.3f;
     public float BubbleMaxTime = 0.7f;
 
-    private float _time;
+    public AudioClip[] clips;
     
+    private float _time;
+        
     // Update is called once per frame
     private void Update()
     {
@@ -34,11 +36,13 @@ public class BubbleSpawner : MonoBehaviour
         go.GetComponent<Rigidbody2D>().AddRelativeForce(push, ForceMode2D.Impulse);
     }
 
-    private void OnDestroy()
+    public void Explode()
     {
         for (var i = 0; i < 40; i++)
         {
             SpawnBubble(Random.insideUnitCircle * 2.0f);
         }
+        
+        AudioSource.PlayClipAtPoint(clips.Pick(), Camera.main.transform.position);
     }
 }
