@@ -86,22 +86,22 @@ MonoBehaviour:
   eyeAdaptation:
     m_Enabled: 0
     m_Settings:
-      lowPercent: 45
-      highPercent: 95
-      minLuminance: -5
-      maxLuminance: 1
+      lowPercent: 19.849558
+      highPercent: 69.849556
+      minLuminance: -3
+      maxLuminance: 2
       keyValue: 0.25
       dynamicKeyValue: 1
       adaptationType: 0
       speedUp: 2
       speedDown: 1
-      logMin: -8
-      logMax: 4
+      logMin: -10
+      logMax: 8
   bloom:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.6
+        intensity: 2
         threshold: 1.1
         softKnee: 0.7
         radius: 5
@@ -121,7 +121,7 @@ MonoBehaviour:
         neutralWhiteLevel: 5.3
         neutralWhiteClip: 10
       basic:
-        postExposure: 0.2
+        postExposure: 0
         temperature: 0
         tint: 0
         hueShift: 0
@@ -313,15 +313,15 @@ MonoBehaviour:
   grain:
     m_Enabled: 1
     m_Settings:
-      colored: 1
-      intensity: 0.1
-      size: 0.3
-      luminanceContribution: 0.4
+      colored: 0
+      intensity: 0.05
+      size: 0.5
+      luminanceContribution: 0.1
   vignette:
     m_Enabled: 1
     m_Settings:
       mode: 0
-      color: {r: 0, g: 0, b: 0, a: 1}
+      color: {r: 0, g: 0, b: 0.2509804, a: 1}
       center: {x: 0.5, y: 0.5}
       intensity: 0.35
       smoothness: 0.2

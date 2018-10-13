@@ -62,7 +62,14 @@ public class PlayerController : MonoBehaviour {
         actionY = _playerActions.ActionY.IsPressed;
 
         //Does this work?
-        View.transform.up = Filter.FIR3(View.transform.up, movement).normalized;
+        if (movement.magnitude > 0.1f)
+        {
+            View.transform.up = Filter.FIR3(View.transform.up, movement).normalized;            
+        }
+        else
+        {
+            View.transform.up = Filter.FIR3(View.transform.up, Vector2.up, 0.95f).normalized;                        
+        }
     }
 
     private float Oscillator()
