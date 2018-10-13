@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour {
     public bool actionX = false;
     public bool actionY = false;
 
+    public Transform View;
+
     
     private InputDevice _userDevice;
     private PlayerActions _playerActions;
@@ -58,6 +60,9 @@ public class PlayerController : MonoBehaviour {
         actionB = _playerActions.ActionB.IsPressed;
         actionX = _playerActions.ActionX.IsPressed;
         actionY = _playerActions.ActionY.IsPressed;
+
+        //Does this work?
+        View.transform.up = Filter.FIR3(View.transform.up, movement).normalized;
     }
 
     private float Oscillator()
