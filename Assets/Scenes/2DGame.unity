@@ -144,7 +144,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.37833825, y: 1.1113962, z: -2.9241247}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1974147547}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -850,12 +851,12 @@ PrefabInstance:
     - target: {fileID: 9012739951501950899, guid: f8ed2d880fae5624495834511844e2e7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.16
+      value: 12.93
       objectReference: {fileID: 0}
     - target: {fileID: 9012739951501950899, guid: f8ed2d880fae5624495834511844e2e7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.97
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9012739951501950899, guid: f8ed2d880fae5624495834511844e2e7,
         type: 3}
@@ -1200,7 +1201,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -100
   m_Sprite: {fileID: 21300000, guid: e32a92ae199224a42bb39b72786f3d24, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1217,12 +1218,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974147545}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.13810492, y: 0.3100769, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.24023333, y: -0.8013193, z: 2.9241247}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 182347490}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2130892677
 PrefabInstance:
@@ -1360,11 +1361,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lava Blob
       objectReference: {fileID: 0}
-    - target: {fileID: 858102781986276444, guid: 51638d3f93ac9a3408921617fcf3af41,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51638d3f93ac9a3408921617fcf3af41, type: 3}
 --- !u!4 &4183314429333363489 stripped
@@ -1388,7 +1384,7 @@ PrefabInstance:
     - target: {fileID: 9012739951501950899, guid: f8ed2d880fae5624495834511844e2e7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.97
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9012739951501950899, guid: f8ed2d880fae5624495834511844e2e7,
         type: 3}
