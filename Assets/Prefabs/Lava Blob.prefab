@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 1684254468091846769}
   - component: {fileID: 1684254468091846775}
   - component: {fileID: 1684254468091846774}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lava Blob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
