@@ -7,9 +7,9 @@ using InControl;
 public class PlayerController : MonoBehaviour {
 
     public float _speed = 1.0f;
-    public float x = 0;
-    public float y = 0;
 
+    public Vector2 input;
+    
     public bool actionA = false;
     public bool actionB = false;
     public bool actionX = false;
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour {
 
     
     private InputDevice _userDevice;
-    private PlayerActions _playerActions;
+    public PlayerActions PlayerActions;
 
     private Rigidbody2D _rb;
 
@@ -32,34 +32,37 @@ public class PlayerController : MonoBehaviour {
     public void bindGamepad(InputDevice device)
     {
         _userDevice = device;
-        _playerActions = new PlayerActions();
-        _playerActions.bindToGamepad(device);
+        PlayerActions = new PlayerActions();
+        PlayerActions.bindToGamepad(device);
     }
 
     public void bindKeyboard()
     {
-        _playerActions = new PlayerActions();
-        _playerActions.bindToKeyboard();
+        PlayerActions = new PlayerActions();
+        PlayerActions.bindToKeyboard();
     }
 
     private void FixedUpdate()
     {
-        if (_playerActions == null) return;
+        if (PlayerActions == null) return;
 
-        var moveHorizontal = _playerActions.Move.X;
-        var moveVertical = _playerActions.Move.Y;
-        x = moveHorizontal;
-        y = moveVertical;
+        var moveHorizontal = PlayerActions.Move.X;
+        var moveVertical = PlayerActions.Move.Y;
 
+        var x = moveHorizontal;
+        var y = moveVertical;
+
+        input = new Vector2(x, y);
+        
         Vector3 movement = new Vector2(moveHorizontal, moveVertical);
         
         _rb.AddForce(movement * _speed * Oscillator());
 
         // Check actions
-        actionA = _playerActions.ActionA.IsPressed;
-        actionB = _playerActions.ActionB.IsPressed;
-        actionX = _playerActions.ActionX.IsPressed;
-        actionY = _playerActions.ActionY.IsPressed;
+        actionA = PlayerActions.ActionA.IsPressed;
+        actionB = PlayerActions.ActionB.IsPressed;
+        actionX = PlayerActions.ActionX.IsPressed;
+        actionY = PlayerActions.ActionY.IsPressed;
 
         //Does this work?
         if (movement.magnitude > 0.1f)
