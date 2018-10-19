@@ -1,37 +1,66 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Net;
+using Constants;
+using UnityEngine;
 
 /// <summary>
 /// A frame rate independent finite impulse response filter suite.
 /// </summary>
 public static class Filter
 {
-    public static float ReferenceDeltaTime
+    public static float FIR(float previous, float current = 0, float smoothness = 0.9f, TimeBase timebase = TimeBase.DeltaTime, float fps = 60.0f)
     {
-        get { return Time.deltaTime * 60.0f; }
+        var k = Mathf.Pow(smoothness, ReferenceTime(timebase, fps));
+        return previous * k + (1.0f - k) * current;
+    }    
+
+    public static Vector2 FIR(Vector2 previous, Vector2 current, float smoothness = 0.9f, TimeBase timebase = TimeBase.DeltaTime, float fps = 60.0f)
+    {
+        var k = Mathf.Pow(smoothness, ReferenceTime(timebase, fps));
+        return previous * k + (1.0f - k) * current;
+    }    
+
+    public static Vector3 FIR(Vector3 previous, Vector3 current, float smoothness = 0.9f, TimeBase timebase = TimeBase.DeltaTime, float fps = 60.0f)
+    {
+        var k = Mathf.Pow(smoothness, ReferenceTime(timebase, fps));
+        return previous * k + (1.0f - k) * current;
+    }    
+
+    public static Vector3 FIR3(Vector3 previous, Vector3 current, float smoothness = 0.9f, TimeBase timebase = TimeBase.DeltaTime, float fps = 60.0f)
+    {
+        var k = Mathf.Pow(smoothness, ReferenceTime(timebase, fps));
+        return previous * k + (1.0f - k) * current;
     }
-       
-    public static float FIR(float previous, float current, float smoothness = 0.9f)
-    {
-        var k = Mathf.Pow(smoothness, ReferenceDeltaTime);
-        return previous * k + (1.0f - k) * current;
-    }    
 
-    public static Vector2 FIR(Vector2 previous, Vector2 current, float smoothness = 0.9f)
-    {
-        var k = Mathf.Pow(smoothness, ReferenceDeltaTime);
-        return previous * k + (1.0f - k) * current;
-    }    
 
-    public static Vector3 FIR(Vector3 previous, Vector3 current, float smoothness = 0.9f)
+    private static float ReferenceTime(TimeBase timebase, float fps)
     {
-        var k = Mathf.Pow(smoothness, ReferenceDeltaTime);
-        return previous * k + (1.0f - k) * current;
-    }    
+        switch (timebase)
+        {
+            case TimeBase.FixedDeltaTime:
+                return Time.fixedDeltaTime * fps;
+            
+            case TimeBase.UnscaledDeltaTime:
+                return Time.unscaledDeltaTime * fps;
+            
+            case TimeBase.UnscaledFixedDeltaTime:
+                return Time.fixedUnscaledDeltaTime * fps;
+         
+            case TimeBase.DeltaTime:
+                return Time.deltaTime * fps;
+            
+            default:
+                return 1.0f;
+        }
+    }
 
-    public static Vector3 FIR3(Vector3 previous, Vector3 current, float smoothness = 0.9f)
+    public enum TimeBase
     {
-        var k = Mathf.Pow(smoothness, ReferenceDeltaTime);
-        return previous * k + (1.0f - k) * current;
+        None,
+        DeltaTime,
+        FixedDeltaTime,
+        UnscaledDeltaTime,
+        UnscaledFixedDeltaTime
     }    
 }
 

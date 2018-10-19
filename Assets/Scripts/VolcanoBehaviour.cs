@@ -30,7 +30,7 @@ public class VolcanoBehaviour : MonoBehaviour
         _time -= Time.deltaTime;
         if (!(_time <= 0)) return;
 
-        ScreenShake.magnitude = 0.5f;
+        ScreenShake.trauma= 0.5f;
         
         _time = Random.Range(MinTime, MaxTime);
 
