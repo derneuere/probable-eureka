@@ -1218,11 +1218,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d697c7d30fbcec54dbc7ac81be93e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 534669905}
+  camera: {fileID: 534669905}
   maxDuration: 1
   useUnscaledTime: 0
   translationUnits: {x: 1, y: 1, z: 0}
-  rotationDegrees: {x: 0, y: 0, z: 3}
+  rotationDegrees: {x: 0, y: 0, z: 2}
   translationExponents: {x: 2, y: 2, z: 2}
   rotationExponents: {x: 2, y: 2, z: 2}
   translationFrequencies: {x: 5, y: 5, z: 5}

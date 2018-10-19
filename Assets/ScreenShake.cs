@@ -1,16 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
 public class ScreenShake : MonoBehaviour
 {    
     [Header("Target Camera")]
-    public Transform cam;
+    public new Transform camera;
 
     [Header("Timing")]
     [Range(0.1f, 5.0f)]
+    [Tooltip("Duration in seconds when trauma is full")]
     public float maxDuration = 1.0f;
+    [Tooltip("If checked, Time.timeScale will not affect the shake.")]
     public bool useUnscaledTime;
     
     [Header("Degrees of Freedom")]
@@ -69,8 +69,8 @@ public class ScreenShake : MonoBehaviour
                 Perlin(time * rotationFrequencies.z, 10)
         };
 
-        cam.transform.localPosition = translation;
-        cam.transform.localRotation = Quaternion.Euler(rotation);
+        camera.transform.localPosition = translation;
+        camera.transform.localRotation = Quaternion.Euler(rotation);
         
         //Trauma Decay
         _trauma = Mathf.Clamp01(_trauma - (useUnscaledTime ? Time.unscaledDeltaTime : Time.deltaTime) / maxDuration);
