@@ -12,16 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd306063f4abb643b10dddcab3b6bc4, type: 3}
   m_Name: New Sound Effect
   m_EditorClassIdentifier: 
-  clips:
-  - {fileID: 8300000, guid: 39c2d0abb43bdec4d8d5d61b48c07f15, type: 3}
-  - {fileID: 8300000, guid: 39c2d0abb43bdec4d8d5d61b48c07f15, type: 3}
-  - {fileID: 8300000, guid: 0d4957c1db92019449a71b8afc8e1166, type: 3}
+  clips: []
   delay:
-    minValue: 0
-    maxValue: 0
+    minimum: 0
+    maximum: 0
   volume:
-    minValue: 0.8984127
-    maxValue: 1
+    minimum: 0.9
+    maximum: 1
   pitch:
-    minValue: 0.9015873
-    maxValue: 1.104762
+    minimum: 0.9
+    maximum: 1.1
