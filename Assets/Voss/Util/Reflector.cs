@@ -3,8 +3,16 @@
  using System.Reflection;
  using UnityEngine;
 
+/// <summary>
+/// Reflection-Related helper functions.
+/// </summary>
 public static class Reflector
 {
+    /// <summary>
+    /// Helps us find descendants of types that we are using.
+    /// </summary>
+    /// <typeparam name="T">type to query for</typeparam>
+    /// <returns>List of the types that inherit from T</returns>
     public static List<Type> GetSubTypes<T>() where T : class
     {
         var types = new List<Type>();
@@ -32,7 +40,7 @@ public static class Reflector
             if (assembly.FullName.StartsWith("mscorlib"))
                 continue;
 
-            foreach (Type type in assembly.GetTypes())
+            foreach (var type in assembly.GetTypes())
             {
                 if (!type.IsClass)
                     continue;

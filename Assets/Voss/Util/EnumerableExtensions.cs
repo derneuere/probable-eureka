@@ -1,6 +1,7 @@
-﻿public static class EnumerableExtensions
+﻿using System.Collections.Generic;
+
+public static class EnumerableExtensions
 {
-	/*
 	/// <summary>
 	/// Wraps any object into an IEnumerable containing only itself.
 	/// Use only where you can't use a getter with yield return directly.
@@ -21,7 +22,6 @@
 			yield break;
 		}
 	}
-	*/
 }
 
 /*

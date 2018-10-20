@@ -30,7 +30,7 @@ public class SquareBehaviour : MonoBehaviour
             Destroy(other.gameObject);
             
             other.GetComponent<BubbleSpawner>().Explode();
-            ScreenShake.trauma = 1.0f;
+            ScreenShakeProfile.trauma = 1.0f;
         }
         else
         {

@@ -1,11 +1,9 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-public class ScreenShake : MonoBehaviour
+[CreateAssetMenu(menuName = "Effect/Screen Shake Profile")]
+public class ScreenShakeProfile : ScriptableObject
 {    
-    [Header("Target Camera")]
-    public new Transform camera;
-
     [Header("Timing")]
     [Range(0.1f, 5.0f)]
     [Tooltip("Duration in seconds when trauma is full")]
@@ -20,9 +18,9 @@ public class ScreenShake : MonoBehaviour
     public Vector3 rotationDegrees = new Vector3(0, 0, 2);
 
     [Header("Smoothing Exponents")]
-    [Tooltip("Higher means smaller trauma is softened.")]
+    [Tooltip("Higher means smaller trauma is relatively softer.")]
     public Vector3 translationExponents = new Vector3(2, 2, 2);
-    [Tooltip("Higher means smaller trauma is softened.")]
+    [Tooltip("Higher means smaller trauma is relatively softer.")]
     public Vector3 rotationExponents = new Vector3(2, 2, 2);
 
     [Header("Frequencies")]
@@ -45,7 +43,7 @@ public class ScreenShake : MonoBehaviour
     }
     
     // Update is called once per frame
-    private void Update()
+    public void Apply(Transform camera)
     {
         var time = useUnscaledTime ? Time.unscaledTime: Time.time;
 
@@ -79,26 +77,26 @@ public class ScreenShake : MonoBehaviour
 
 
 
-[CustomEditor(typeof(ScreenShake), true)]
+[CustomEditor(typeof(ScreenShakeProfile), true)]
 public class ScreenShakeEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
-        GUILayout.Label("Preview in Play Mode", EditorStyles.boldLabel);
+        GUILayout.Label("Preview in Play Mode (attach to Camera Rig)", EditorStyles.boldLabel);
         EditorGUI.BeginDisabledGroup(!Application.isPlaying);
         if (GUILayout.Button("Shake 100%"))
         {
-            ScreenShake.trauma = 1.0f;
+            ScreenShakeProfile.trauma = 1.0f;
         }
         if (GUILayout.Button("Shake 50%"))
         {
-            ScreenShake.trauma = 0.5f;
+            ScreenShakeProfile.trauma = 0.5f;
         }
         if (GUILayout.Button("Shake 25%"))
         {
-            ScreenShake.trauma = 0.25f;
+            ScreenShakeProfile.trauma = 0.25f;
         }
         EditorGUI.EndDisabledGroup();
     }

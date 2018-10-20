@@ -1215,18 +1215,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 677013324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d697c7d30fbcec54dbc7ac81be93e058, type: 3}
+  m_Script: {fileID: 11500000, guid: de11a32f5a5dded41a04ca33c2fb2d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 534669905}
-  maxDuration: 1
-  useUnscaledTime: 0
-  translationUnits: {x: 1, y: 1, z: 0}
-  rotationDegrees: {x: 0, y: 0, z: 2}
-  translationExponents: {x: 2, y: 2, z: 2}
-  rotationExponents: {x: 2, y: 2, z: 2}
-  translationFrequencies: {x: 5, y: 5, z: 5}
-  rotationFrequencies: {x: 5, y: 5, z: 5}
+  camera: {fileID: 534669904}
+  screenShake: {fileID: 11400000, guid: 5ec369d35b0b6b147be37d71692cc3f3, type: 2}
 --- !u!4 &677013326
 Transform:
   m_ObjectHideFlags: 0

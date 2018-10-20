@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// A set of simple convenience functions for Unity's immediate mode GUI events.
+/// </summary>
 public static class EventExtensions
 {
     public static bool doubleclick(this Event e)

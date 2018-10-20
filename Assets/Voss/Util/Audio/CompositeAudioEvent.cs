@@ -2,34 +2,36 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-[CreateAssetMenu(menuName="Audio Events/Composite")]
+[CreateAssetMenu(menuName="Effect/Composite Audio")]
 public class CompositeAudioEvent : AudioEvent
 {
 	[Serializable]
 	public struct CompositeEntry
 	{
 		public AudioEvent Event;
-		public float Weight;
+		public float weight;
 	}
 
-	public CompositeEntry[] Entries;
+	public CompositeEntry[] entries;
 
 	public override void Play(AudioSource source)
 	{
 		float totalWeight = 0;
-		for (int i = 0; i < Entries.Length; ++i)
-			totalWeight += Entries[i].Weight;
-
-		float pick = Random.Range(0, totalWeight);
-		for (int i = 0; i < Entries.Length; ++i)
+		for (var i = 0; i < entries.Length; ++i)
 		{
-			if (pick > Entries[i].Weight)
+			totalWeight += entries[i].weight;			
+		}
+
+		var pick = Random.Range(0, totalWeight);
+		for (var i = 0; i < entries.Length; ++i)
+		{
+			if (pick > entries[i].weight)
 			{
-				pick -= Entries[i].Weight;
+				pick -= entries[i].weight;
 				continue;
 			}
 
-			Entries[i].Event.Play(source);
+			entries[i].Event.Play(source);
 			return;
 		}
 	}
