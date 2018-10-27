@@ -6,12 +6,6 @@ public class CameraRig : MonoBehaviour
 {
     public new Camera camera;    
     public ScreenShakeProfile screenShake;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     private void Update()

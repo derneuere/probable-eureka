@@ -56,6 +56,9 @@ public class PlayerController : MonoBehaviour
 
         //Jumping up is softer than falling down.
         _rb.gravityScale = _rb.velocity.y > 0 ? 1 : FallFactor;
+        
+        //Apply directional scaling
+        View.transform.localScale = new Vector3(Mathf.Sign(PlayerActions.Move.X) < 0 ? -1 : 1, 1, 1);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
