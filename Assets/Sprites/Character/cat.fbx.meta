@@ -1,0 +1,307 @@
+fileFormatVersion: 2
+guid: 305936ef8cd56fc43b1159b5ef15a334
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bone
+    100004: Bone.001
+    100006: Bone.002
+    100008: Bone.003
+    100010: Bone.003_end
+    100012: Bone.004
+    100014: Bone.005
+    100016: Bone.006
+    100018: Bone.006_end
+    100020: Bone.007
+    100022: Bone.008
+    100024: Bone.008_end
+    100026: Bone.009
+    100028: Bone.010
+    100030: Bone.010_end
+    100032: Bone.011
+    100034: Bone.012
+    100036: Bone.012_end
+    100038: Bone.013
+    100040: Bone.013_end
+    100042: //RootNode
+    100044: cat_0000.png
+    100046: cat_0001.png
+    100048: cat_0002.png
+    100050: cat_0003.png
+    100052: cat_0004.png
+    100054: cat_0005.png
+    100056: cat_0006.png
+    100058: cat_0007.png
+    100060: cat_0008.png
+    100062: cat_0009.png
+    100064: cat_0010.png
+    100066: cat_0011.png
+    100068: cat_0012.png
+    100070: cat_0013.png
+    100072: SpriteObject
+    400000: Armature
+    400002: Bone
+    400004: Bone.001
+    400006: Bone.002
+    400008: Bone.003
+    400010: Bone.003_end
+    400012: Bone.004
+    400014: Bone.005
+    400016: Bone.006
+    400018: Bone.006_end
+    400020: Bone.007
+    400022: Bone.008
+    400024: Bone.008_end
+    400026: Bone.009
+    400028: Bone.010
+    400030: Bone.010_end
+    400032: Bone.011
+    400034: Bone.012
+    400036: Bone.012_end
+    400038: Bone.013
+    400040: Bone.013_end
+    400042: //RootNode
+    400044: cat_0000.png
+    400046: cat_0001.png
+    400048: cat_0002.png
+    400050: cat_0003.png
+    400052: cat_0004.png
+    400054: cat_0005.png
+    400056: cat_0006.png
+    400058: cat_0007.png
+    400060: cat_0008.png
+    400062: cat_0009.png
+    400064: cat_0010.png
+    400066: cat_0011.png
+    400068: cat_0012.png
+    400070: cat_0013.png
+    400072: SpriteObject
+    2100000: cat_0005.png.001
+    2100002: cat_0001.png
+    2100004: cat_0000.png
+    2100006: cat_0006.png
+    2100008: cat_0012.png
+    2100010: cat_0007.png
+    2100012: cat_0011.png
+    2100014: cat_0002.png
+    2100016: cat_0004.png
+    2100018: cat_0003.png
+    2100020: cat_0009.png
+    2100022: cat_0013.png
+    2100024: cat_0008.png
+    2100026: cat_0010.png
+    4300000: cat_0005.png
+    4300002: cat_0001.png
+    4300004: cat_0000.png
+    4300006: cat_0006.png
+    4300008: cat_0012.png
+    4300010: cat_0007.png
+    4300012: cat_0011.png
+    4300014: cat_0002.png
+    4300016: cat_0004.png
+    4300018: cat_0003.png
+    4300020: cat_0009.png
+    4300022: cat_0013.png
+    4300024: cat_0008.png
+    4300026: cat_0010.png
+    7400000: Armature|ArmatureAction
+    9500000: //RootNode
+    13700000: cat_0000.png
+    13700002: cat_0001.png
+    13700004: cat_0002.png
+    13700006: cat_0003.png
+    13700008: cat_0004.png
+    13700010: cat_0005.png
+    13700012: cat_0006.png
+    13700014: cat_0007.png
+    13700016: cat_0008.png
+    13700018: cat_0009.png
+    13700020: cat_0010.png
+    13700022: cat_0011.png
+    13700024: cat_0012.png
+    13700026: cat_0013.png
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0000.png
+    second: {fileID: 2100000, guid: fb5d2737d8e6d5a4594f3d320400ef0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0001.png
+    second: {fileID: 2100000, guid: 536ef6e112fc7a344ac2c5a0b3c6fb7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0002.png
+    second: {fileID: 2100000, guid: a56fefb3c65b78449ae254265dbbcf10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0003.png
+    second: {fileID: 2100000, guid: 6d882759c59d7604293985f7f0fd159a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0004.png
+    second: {fileID: 2100000, guid: d17b6d69a2e25804fb50fefe3bef8e6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0005.png.001
+    second: {fileID: 2100000, guid: 1198dd4022379bf409accd472bb58933, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0006.png
+    second: {fileID: 2100000, guid: 431a83f1c523a4744b0a90756c23b4ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0007.png
+    second: {fileID: 2100000, guid: ae92f5adb27ef984287760ae5d4a32e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0008.png
+    second: {fileID: 2100000, guid: 98cc436505e15ee4cb6b99a623299621, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0009.png
+    second: {fileID: 2100000, guid: 2e920073ae03cb94282e17a28e2b860d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0010.png
+    second: {fileID: 2100000, guid: 68c2861c3e8fab64fa6a97c76c5eda11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0011.png
+    second: {fileID: 2100000, guid: 8ed246fd3d9a273489b85cd47cb66bcd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0012.png
+    second: {fileID: 2100000, guid: 0e425eac786e0c744ba519e6a501d27f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0013.png
+    second: {fileID: 2100000, guid: 3d22e34985654ee4992d27db092ff140, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|ArmatureAction
+      takeName: Armature|ArmatureAction
+      firstFrame: 0
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
