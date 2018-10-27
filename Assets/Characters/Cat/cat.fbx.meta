@@ -1,0 +1,365 @@
+fileFormatVersion: 2
+guid: 755859facee15c9449afccab9a6a955f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bone
+    100004: Bone.001
+    100006: Bone.002
+    100008: Bone.003
+    100010: Bone.003_end
+    100012: Bone.004
+    100014: Bone.005
+    100016: Bone.006
+    100018: Bone.006_end
+    100020: Bone.007
+    100022: Bone.008
+    100024: Bone.008_end
+    100026: Bone.009
+    100028: Bone.010
+    100030: Bone.010_end
+    100032: Bone.011
+    100034: Bone.012
+    100036: Bone.012_end
+    100038: Bone.013
+    100040: Bone.013_end
+    100042: //RootNode
+    100044: cat_0000.png
+    100046: cat_0001.png
+    100048: cat_0002.png
+    100050: cat_0003.png
+    100052: cat_0004.png
+    100054: cat_0005.png
+    100056: cat_0006.png
+    100058: cat_0007.png
+    100060: cat_0008.png
+    100062: cat_0009.png
+    100064: cat_0010.png
+    100066: cat_0011.png
+    100068: cat_0012.png
+    100070: cat_0013.png
+    100072: SpriteObject
+    400000: Armature
+    400002: Bone
+    400004: Bone.001
+    400006: Bone.002
+    400008: Bone.003
+    400010: Bone.003_end
+    400012: Bone.004
+    400014: Bone.005
+    400016: Bone.006
+    400018: Bone.006_end
+    400020: Bone.007
+    400022: Bone.008
+    400024: Bone.008_end
+    400026: Bone.009
+    400028: Bone.010
+    400030: Bone.010_end
+    400032: Bone.011
+    400034: Bone.012
+    400036: Bone.012_end
+    400038: Bone.013
+    400040: Bone.013_end
+    400042: //RootNode
+    400044: cat_0000.png
+    400046: cat_0001.png
+    400048: cat_0002.png
+    400050: cat_0003.png
+    400052: cat_0004.png
+    400054: cat_0005.png
+    400056: cat_0006.png
+    400058: cat_0007.png
+    400060: cat_0008.png
+    400062: cat_0009.png
+    400064: cat_0010.png
+    400066: cat_0011.png
+    400068: cat_0012.png
+    400070: cat_0013.png
+    400072: SpriteObject
+    2100000: cat_0005.png.001
+    2100002: cat_0001.png
+    2100004: cat_0000.png
+    2100006: cat_0006.png
+    2100008: cat_0012.png
+    2100010: cat_0007.png
+    2100012: cat_0011.png
+    2100014: cat_0002.png
+    2100016: cat_0004.png
+    2100018: cat_0003.png
+    2100020: cat_0009.png
+    2100022: cat_0013.png
+    2100024: cat_0008.png
+    2100026: cat_0010.png
+    4300000: cat_0005.png
+    4300002: cat_0001.png
+    4300004: cat_0000.png
+    4300006: cat_0006.png
+    4300008: cat_0012.png
+    4300010: cat_0007.png
+    4300012: cat_0011.png
+    4300014: cat_0002.png
+    4300016: cat_0004.png
+    4300018: cat_0003.png
+    4300020: cat_0009.png
+    4300022: cat_0013.png
+    4300024: cat_0008.png
+    4300026: cat_0010.png
+    7400000: Run
+    7400002: Walk
+    7400004: Armature|Action
+    7400006: Armature|Run
+    7400008: Armature|Walk
+    7400010: Idle
+    9500000: //RootNode
+    13700000: cat_0000.png
+    13700002: cat_0001.png
+    13700004: cat_0002.png
+    13700006: cat_0003.png
+    13700008: cat_0004.png
+    13700010: cat_0005.png
+    13700012: cat_0006.png
+    13700014: cat_0007.png
+    13700016: cat_0008.png
+    13700018: cat_0009.png
+    13700020: cat_0010.png
+    13700022: cat_0011.png
+    13700024: cat_0012.png
+    13700026: cat_0013.png
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0000.png
+    second: {fileID: 2100000, guid: 2f28b5554dc09b64482761772c5d0b46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0001.png
+    second: {fileID: 2100000, guid: ac4c7c2bb93084945ac60b14b45edf07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0002.png
+    second: {fileID: 2100000, guid: 3bbef955f77a66043a7ebe947568e348, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0003.png
+    second: {fileID: 2100000, guid: d9a6b247a1d37e040a622ccfad561c27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0004.png
+    second: {fileID: 2100000, guid: 953c40d42edb459449d4b0bd1505e042, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0005.png.001
+    second: {fileID: 2100000, guid: c344b9f1d6d2e8147997cb6cb248d5d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0006.png
+    second: {fileID: 2100000, guid: 0a4a0c94b1cdac142b1ce076b53d0a03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0007.png
+    second: {fileID: 2100000, guid: a50347b23c99e9e419e6134bf8ceae29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0008.png
+    second: {fileID: 2100000, guid: a158c164f329c564eb45fa0d5b7066ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0009.png
+    second: {fileID: 2100000, guid: 9ef4cba3a19c6a54cb7d9e39ac77e46f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0010.png
+    second: {fileID: 2100000, guid: 7fea3600aac0f4144858556ba549d419, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0011.png
+    second: {fileID: 2100000, guid: a648f801cc2652043b005e8e6f7e9ddb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0012.png
+    second: {fileID: 2100000, guid: b5245992e4d621543a93fd60e45f35d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cat_0013.png
+    second: {fileID: 2100000, guid: 9e46af70269b1b9499bb65d5dd8ba51f, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Run
+      takeName: Run
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk
+      takeName: Walk
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: Idle
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
