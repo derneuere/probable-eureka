@@ -3289,7 +3289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDegree: 0
-  looseDegree: 20
+  looseDegree: 30
   degreeIncrement: 0.5
   livePoints: 9
   degreeUI: {fileID: 400447303}
