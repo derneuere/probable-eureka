@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
                 if (_jumped++ < 2)
                 {
                     JumpSound.Play(GetComponent<AudioSource>());
-                    animator.SetTrigger("jump");
+                    if (_jumped < 2) animator.SetTrigger("jump");
 
                     var vel2 = _rb.velocity;
                     if (vel2.y < 0)
