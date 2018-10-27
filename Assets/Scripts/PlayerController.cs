@@ -14,8 +14,6 @@ public class PlayerController : MonoBehaviour
 
     public Transform View;
 
-    private float cooldown;
-
     public PlayerActions PlayerActions;
 
     private Rigidbody2D _rb;
