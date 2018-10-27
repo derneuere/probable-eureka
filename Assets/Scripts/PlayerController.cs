@@ -10,9 +10,9 @@ public class PlayerController : MonoBehaviour
 
     public const float Speed = 12.0f;
     public const float Jump = 12.0f;
-    public const float JumpGravity = 2.0f;
-    public const float FallGravity = 3.0f;
-    public const float AirControl = 0.5f;
+    public const float JumpGravity = 3.0f;
+    public const float FallGravity = 6.0f;
+    public const float AirControl = 1.0f;
 
     public Transform View;
 
@@ -45,26 +45,41 @@ public class PlayerController : MonoBehaviour
 
         //Apply movement
         var input = new Vector2(PlayerActions.Move.X, 0);
-        _rb.AddForce(input * Speed *(_jumped == 0 ? 1.0f : AirControl));
+        //_rb.AddForce(input * Speed *(_jumped == 0 ? 1.0f : AirControl));
 
+        var vel = _rb.velocity;
+        vel.x = PlayerActions.Move.X * Speed * (_jumped==0 ? 1: AirControl);
+        _rb.velocity = Filter.FIR(_rb.velocity, vel, 0.8f);
+
+            
         //Jump
         if (PlayerActions.ActionA.WasPressed)
         {
             if (_jumped++ < 2)
             {
-                _rb.AddForce(Vector2.up * Jump, ForceMode2D.Impulse);
+                var vel2 = _rb.velocity;
+                if (vel2.y < 0)
+                {
+                    vel2.y = 0;
+                }
+                vel2.y += Jump;
+                
+                _rb.velocity = vel2;
             }
+        }
+        else if (PlayerActions.ActionA.WasPressed)
+        {
+            
         }
 
         //Jumping up is softer than falling down.
-        _rb.gravityScale = _rb.velocity.y > 0 ? JumpGravity : FallGravity;
-        
-        //Brake player if we're not inputting
-        if (Mathf.Abs(PlayerActions.Move.X) < 0.1f)
+        if (_jumped > 0)
         {
-            var vel = _rb.velocity;
-            vel.x = 0;
-            _rb.velocity = Filter.FIR(_rb.velocity, vel, 0.97f);
+            _rb.gravityScale = _rb.velocity.y > 0 ? JumpGravity : FallGravity;            
+        }
+        else
+        {
+            _rb.gravityScale = JumpGravity;
         }
         
         //Apply directional scaling

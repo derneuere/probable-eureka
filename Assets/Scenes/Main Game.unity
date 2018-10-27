@@ -1004,5 +1004,10 @@ PrefabInstance:
       propertyPath: score
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9012739951501950897, guid: f8ed2d880fae5624495834511844e2e7,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8ed2d880fae5624495834511844e2e7, type: 3}
