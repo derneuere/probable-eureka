@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7181f404f1447c0a7a17b3070b952b, type: 3}
+  m_Name: Ground Profile
+  m_EditorClassIdentifier: 
+  m_Angles:
+  - m_Start: -80
+    m_End: 80
+    m_Order: 7
+    m_Sprites:
+    - {fileID: 21300000, guid: c07ad3c274f42284c82732a146cbb62c, type: 3}
+  - m_Start: 80
+    m_End: 157.5
+    m_Order: 6
+    m_Sprites:
+    - {fileID: 21300000, guid: a1802c4908a90d040b7d2838984991e3, type: 3}
+  - m_Start: 157.5
+    m_End: 202.5
+    m_Order: 8
+    m_Sprites:
+    - {fileID: 21300000, guid: a1802c4908a90d040b7d2838984991e3, type: 3}
+  - m_Start: -157.5
+    m_End: -80
+    m_Order: 0
+    m_Sprites:
+    - {fileID: 21300000, guid: a1802c4908a90d040b7d2838984991e3, type: 3}
+  m_FillTexture: {fileID: 2800000, guid: bdcb0a2792805d54fab244282d235989, type: 3}
+  m_CornerSprites:
+  - m_CornerType: 0
+    m_Sprites:
+    - {fileID: 21300000, guid: c07ad3c274f42284c82732a146cbb62c, type: 3}
+  - m_CornerType: 1
+    m_Sprites:
+    - {fileID: 21300000, guid: c07ad3c274f42284c82732a146cbb62c, type: 3}
+  - m_CornerType: 2
+    m_Sprites:
+    - {fileID: 21300000, guid: a1802c4908a90d040b7d2838984991e3, type: 3}
+  - m_CornerType: 3
+    m_Sprites:
+    - {fileID: 21300000, guid: a1802c4908a90d040b7d2838984991e3, type: 3}
+  - m_CornerType: 4
+    m_Sprites:
+    - {fileID: 21300000, guid: bdcb0a2792805d54fab244282d235989, type: 3}
+  - m_CornerType: 5
+    m_Sprites:
+    - {fileID: 21300000, guid: bdcb0a2792805d54fab244282d235989, type: 3}
+  - m_CornerType: 6
+    m_Sprites:
+    - {fileID: 21300000, guid: bdcb0a2792805d54fab244282d235989, type: 3}
+  - m_CornerType: 7
+    m_Sprites:
+    - {fileID: 21300000, guid: bdcb0a2792805d54fab244282d235989, type: 3}
+  m_FillPixelPerUnit: 100
+  m_BevelSize: 0
+  m_BevelCutoff: 0
+  m_FillOffset: 0
+  m_WorldSpaceUV: 0
+  m_UseSpriteBorders: 1
