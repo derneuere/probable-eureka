@@ -8,16 +8,9 @@ using InControl;
 public class PlayerController : MonoBehaviour
 {
 
-    public const float Speed = 10.0f;
-    public const float Jump = 5.0f;
+    public const float Speed = 12.0f;
+    public const float Jump = 8.0f;
     public const float FallFactor = 2.0f;
-
-    public Vector2 input;
-
-    public bool actionA = false;
-    public bool actionB = false;
-    public bool actionX = false;
-    public bool actionY = false;
 
     public Transform View;
 
@@ -53,24 +46,12 @@ public class PlayerController : MonoBehaviour
     {
         if (PlayerActions == null) return;
 
-        var moveHorizontal = PlayerActions.Move.X;
-        //var moveVertical = PlayerActions.Move.Y;
-
-        var x = moveHorizontal;
-        //var y = moveVertical;
-
-        input = new Vector2(x, 0);
-
-        _rb.AddForce(input * Speed * Oscillator());
-
-        // Check actions
-        actionA = PlayerActions.ActionA.WasPressed;
-        actionB = PlayerActions.ActionB.WasPressed;
-        actionX = PlayerActions.ActionX.WasPressed;
-        actionY = PlayerActions.ActionY.WasPressed;
+        //Apply movement
+        var input = new Vector2(PlayerActions.Move.X, 0);
+        _rb.AddForce(input * Speed);
 
         //Jump
-        if (actionA)
+        if (PlayerActions.ActionA.WasPressed)
         {
             if (grounded)
             {
@@ -79,60 +60,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        //Does this work?
-        /*
-        if (movement.magnitude > 0.1f)
-        {
-            View.transform.up = Filter.FIR3(View.transform.up, movement).normalized;            
-        }
-        else
-        {
-            View.transform.up = Filter.FIR3(View.transform.up, Vector2.up, 0.95f).normalized;                        
-        }
-        */
-
         //Jumping up is softer than falling down.
         _rb.gravityScale = _rb.velocity.y > 0 ? 1 : FallFactor;
-    }
-
-    private float Oscillator()
-    {
-        return 0.7f + Mathf.Sin(Time.time * 2.0f * 2.0f * Mathf.PI);
-    }
-
-    private void updateCurrentCountry()
-    {
-        /*
-        _currentCountry = null;
-
-        var layerMask = LayerMask.GetMask("Countries");
-
-
-        RaycastHit hit;
-        // Does the ray intersect any country object
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, Mathf.Infinity, layerMask))
-        {
-            _currentCountry = hit.transform.GetComponent<Country>();
-
-            if (_currentCountry != _lastCountry)
-            {
-                if (_lastCountry != null) onExitedCountry(_lastCountry);
-
-                if (_currentCountry != null) onEnteredCountry(_lastCountry, _currentCountry);
-
-                _lastCountry = _currentCountry;
-            }
-        }
-        else
-        {
-            _currentCountry = null;
-            if (_lastCountry != null)
-            {
-                onExitedCountry(_lastCountry);
-                _lastCountry = null;
-            }
-        }
-        */
     }
 
     private void OnCollisionEnter2D(Collision2D other)
