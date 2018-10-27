@@ -8,6 +8,8 @@ using InControl;
 public class PlayerController : MonoBehaviour
 {
     public AudioEvent JumpSound;
+
+    private Animator animator;
     
     public const float Speed = 12.0f;
     public static readonly float[] Jump = {0, 15.0f, 10.0f};
@@ -15,17 +17,22 @@ public class PlayerController : MonoBehaviour
     public const float FallGravity = 6.0f;
     public const float AirControl = 1.0f;
 
+    public const float FullAnimSpeed = 8.0f;
+
     public Transform View;
 
     public PlayerActions PlayerActions;
 
     private Rigidbody2D _rb;
     private int _jumped;
+    private float direction = 1;
+    private float _animSpeed;
 
     // Use this for initialization
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     public void BindGamepad(InputDevice device)
@@ -82,8 +89,19 @@ public class PlayerController : MonoBehaviour
         }
         
         //Apply directional scaling
-        View.transform.localScale = new Vector3(Mathf.Sign(PlayerActions.Move.X) < 0 ? -1 : 1, 1, 1);
+        if (Mathf.Sign(PlayerActions.Move.X) > 0)
+        {
+            View.transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (Mathf.Sign(PlayerActions.Move.X) < 0)
+        {
+            View.transform.localScale = new Vector3(-1, 1, 1);
+        }
+
+        _animSpeed = Filter.FIR(_animSpeed, Mathf.Clamp01(_rb.velocity.magnitude / FullAnimSpeed));
         
+        //Animator
+        animator.SetFloat("speed", Mathf.Abs(_animSpeed));
     }
 
     private void OnCollisionEnter2D(Collision2D other)
