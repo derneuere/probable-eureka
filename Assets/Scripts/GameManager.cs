@@ -21,13 +21,17 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             endTextUI.loose();
         }
-        if (winningCondition()) {
-            //To-Do: Win
-            endTextUI.win();
-        }
+        
         startDegree = startDegree + (Time.deltaTime * degreeIncrement);
         degreeUI.SetDegree(startDegree);
         lifePointsUI.SetLife(livePoints);
+    }
+
+    public void win() {
+
+        Time.timeScale = 0;
+        endTextUI.win();
+        
     }
 
     bool winningCondition() {
