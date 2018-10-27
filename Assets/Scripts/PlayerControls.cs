@@ -42,7 +42,7 @@ public class PlayerControls : MonoBehaviour {
             {
                 // Assign to the next player
                 PlayerController nextPlayer = _unassignedPlayers[0];
-                nextPlayer.bindKeyboard();
+                nextPlayer.BindKeyboard();
                 _unassignedPlayers.RemoveAt(0);
                 _assignedPlayers.Add(nextPlayer);
                 nextPlayer.gameObject.SetActive(true);
@@ -64,7 +64,7 @@ public class PlayerControls : MonoBehaviour {
                 _assignedDevices.Add(activeDevice);
 
                 PlayerController nextPlayer = _unassignedPlayers[0];
-                nextPlayer.bindGamepad(activeDevice);
+                nextPlayer.BindGamepad(activeDevice);
                 _unassignedPlayers.RemoveAt(0);
                 _assignedPlayers.Add(nextPlayer);
                 nextPlayer.gameObject.SetActive(true);

@@ -27,13 +27,13 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
     }
 
-    public void bindGamepad(InputDevice device)
+    public void BindGamepad(InputDevice device)
     {
         PlayerActions = new PlayerActions();
         PlayerActions.bindToGamepad(device);
     }
 
-    public void bindKeyboard()
+    public void BindKeyboard()
     {
         PlayerActions = new PlayerActions();
         PlayerActions.bindToKeyboard();
