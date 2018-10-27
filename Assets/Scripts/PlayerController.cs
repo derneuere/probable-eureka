@@ -9,8 +9,9 @@ public class PlayerController : MonoBehaviour
 {
 
     public const float Speed = 12.0f;
-    public const float Jump = 6.0f;
-    public const float FallFactor = 2.0f;
+    public const float Jump = 12.0f;
+    public const float JumpGravity = 2.0f;
+    public const float FallGravity = 3.0f;
     public const float AirControl = 0.5f;
 
     public Transform View;
@@ -56,7 +57,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Jumping up is softer than falling down.
-        _rb.gravityScale = _rb.velocity.y > 0 ? 1 : FallFactor;
+        _rb.gravityScale = _rb.velocity.y > 0 ? JumpGravity : FallGravity;
         
         //Brake player if we're not inputting
         if (Mathf.Abs(PlayerActions.Move.X) < 0.1f)
