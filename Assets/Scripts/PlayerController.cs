@@ -8,20 +8,18 @@ using InControl;
 public class PlayerController : MonoBehaviour
 {
 
-    public const float Speed = 12.0f;
-    public const float Jump = 8.0f;
+    public const float Speed = 8.0f;
+    public const float Jump = 6.0f;
     public const float FallFactor = 2.0f;
 
     public Transform View;
 
     private float cooldown;
 
-    private InputDevice _userDevice;
     public PlayerActions PlayerActions;
 
     private Rigidbody2D _rb;
-    private bool grounded = true;
-
+    private int _grounded;
 
     // Use this for initialization
     private void Start()
@@ -31,7 +29,6 @@ public class PlayerController : MonoBehaviour
 
     public void bindGamepad(InputDevice device)
     {
-        _userDevice = device;
         PlayerActions = new PlayerActions();
         PlayerActions.bindToGamepad(device);
     }
@@ -53,9 +50,8 @@ public class PlayerController : MonoBehaviour
         //Jump
         if (PlayerActions.ActionA.WasPressed)
         {
-            if (grounded)
+            if (_grounded++ < 2)
             {
-                grounded = false;
                 _rb.AddForce(Vector2.up * Jump, ForceMode2D.Impulse);
             }
         }
@@ -70,7 +66,7 @@ public class PlayerController : MonoBehaviour
         var direction = (Vector2) transform.position - other.contacts[0].point;
         if (Vector2.Dot(direction, Vector2.up) > 0.5)
         {
-            grounded = true;
+            _grounded = 0;
         }
     }
 
