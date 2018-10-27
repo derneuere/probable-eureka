@@ -19,7 +19,7 @@ public class scrGeschenk : MonoBehaviour
             destroysound.Play(GetComponent<AudioSource>());
             GameObject temp = Instantiate(magicpoofGeschenk,transform,false);
             temp.gameObject.transform.localScale = new Vector3(5,5,5);
-            lebensAnderung.livePoints = lebensAnderung.livePoints - 1;
+            lebensAnderung.startDegree = lebensAnderung.startDegree - 2;
             Destroy(view);
             Destroy(gameObject,3.0f);
 
