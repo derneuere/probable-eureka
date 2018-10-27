@@ -61,10 +61,13 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         //If we hit something that is reasonably straight below us, we can jump again.
-        var direction = (Vector2) transform.position - other.contacts[0].point;
-        if (Vector2.Dot(direction, Vector2.up) > 0.5)
+        for (var i = 0; i < other.contactCount; i++)
         {
-            _grounded = 0;
+            var contact = other.contacts[i];
+            if (Vector2.Dot(contact.normal, Vector2.up) > 0.1)
+            {
+                _grounded = 0;
+            }
         }
     }
 
