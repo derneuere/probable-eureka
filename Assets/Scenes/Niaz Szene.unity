@@ -254,6 +254,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2134076324312743165, guid: 9e7e69b513db44460b2776a727dd7f37,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e7e69b513db44460b2776a727dd7f37, type: 3}
 --- !u!114 &167513148 stripped
@@ -450,7 +455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDegree: 0
-  looseDegree: 1
+  looseDegree: 10
   degreeIncrement: 0.1
   livePoints: 5
   degreeUI: {fileID: 167513149}
