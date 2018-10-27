@@ -26,7 +26,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb;
     private int _jumped;
     private float direction = 1;
-    private float _animSpeed;
+    private float _runSpeed;
+    private float _fallSpeed;
 
     // Use this for initialization
     private void Start()
@@ -66,6 +67,7 @@ public class PlayerController : MonoBehaviour
             if (_jumped++ < 2)
             {
                 JumpSound.Play(GetComponent<AudioSource>());
+                animator.SetTrigger("jump");
                 
                 var vel2 = _rb.velocity;
                 if (vel2.y < 0)
@@ -98,10 +100,13 @@ public class PlayerController : MonoBehaviour
             View.transform.localScale = new Vector3(-1, 1, 1);
         }
 
-        _animSpeed = Filter.FIR(_animSpeed, Mathf.Clamp01(_rb.velocity.magnitude / FullAnimSpeed));
+        _runSpeed = Filter.FIR(_runSpeed, Mathf.Clamp01(_rb.velocity.magnitude / FullAnimSpeed));
+        _fallSpeed = Filter.FIR(_fallSpeed, _rb.velocity.y / FullAnimSpeed);
         
         //Animator
-        animator.SetFloat("speed", Mathf.Abs(_animSpeed));
+        animator.SetFloat("speed", Mathf.Abs(_runSpeed));
+        animator.SetFloat("verticalSpeed", _fallSpeed);
+        animator.SetBool("onGround", _jumped == 0);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
