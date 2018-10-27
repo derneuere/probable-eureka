@@ -10,11 +10,11 @@ public class scrGeschenk : MonoBehaviour
     public AudioEvent destroysound;
     public GameObject view;
     public GameObject magicpoofGeschenk;
-    private GameManager temperaturAnderung;
+    private GameManager gameManager;
     // Start is called before the first frame update
     private void Start()
     {
-        temperaturAnderung = GameObject.FindObjectOfType<GameManager>();
+        gameManager = GameObject.FindObjectOfType<GameManager>();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -28,7 +28,7 @@ public class scrGeschenk : MonoBehaviour
 
             temp.gameObject.transform.localScale = new Vector3(5,5,5);
 
-            temperaturAnderung.startDegree = temperaturAnderung.startDegree - 2;
+            gameManager.startDegree = gameManager.startDegree - 2;
 
             Destroy(view);
 
