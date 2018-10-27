@@ -252,7 +252,7 @@ PrefabInstance:
     - target: {fileID: 2134076324312743165, guid: 9e7e69b513db44460b2776a727dd7f37,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e7e69b513db44460b2776a727dd7f37, type: 3}
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startDegree: 0
   looseDegree: 1
-  degreeIncrement: 1
+  degreeIncrement: 0.1
   livePoints: 5
   degreeUI: {fileID: 167513149}
   lifePointsUI: {fileID: 167513148}
