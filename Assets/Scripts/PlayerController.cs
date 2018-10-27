@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 {
 
     public const float Speed = 12.0f;
-    public const float Jump = 12.0f;
+    public static readonly float[] Jump = {0, 15.0f, 10.0f};
     public const float JumpGravity = 3.0f;
     public const float FallGravity = 6.0f;
     public const float AirControl = 1.0f;
@@ -62,14 +62,10 @@ public class PlayerController : MonoBehaviour
                 {
                     vel2.y = 0;
                 }
-                vel2.y += Jump;
+                vel2.y += Jump[_jumped];
                 
                 _rb.velocity = vel2;
             }
-        }
-        else if (PlayerActions.ActionA.WasPressed)
-        {
-            
         }
 
         //Jumping up is softer than falling down.
