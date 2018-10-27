@@ -5,12 +5,15 @@ using System.Security.Policy;
 using UnityEngine;
 using InControl;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
 
-    public float _speed = 1.0f;
+    public const float Speed = 10.0f;
+    public const float Jump = 5.0f;
+    public const float FallFactor = 2.0f;
 
     public Vector2 input;
-    
+
     public bool actionA = false;
     public bool actionB = false;
     public bool actionX = false;
@@ -19,13 +22,15 @@ public class PlayerController : MonoBehaviour {
     public Transform View;
 
     private float cooldown;
-    
+
     private InputDevice _userDevice;
     public PlayerActions PlayerActions;
 
     private Rigidbody2D _rb;
+    private bool grounded = true;
 
-	// Use this for initialization
+
+    // Use this for initialization
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -49,16 +54,14 @@ public class PlayerController : MonoBehaviour {
         if (PlayerActions == null) return;
 
         var moveHorizontal = PlayerActions.Move.X;
-        var moveVertical = PlayerActions.Move.Y;
+        //var moveVertical = PlayerActions.Move.Y;
 
         var x = moveHorizontal;
-        var y = moveVertical;
+        //var y = moveVertical;
 
-        input = new Vector2(x, y);
-        
-        Vector3 movement = new Vector2(moveHorizontal, moveVertical);
-        
-        _rb.AddForce(movement * _speed * Oscillator());
+        input = new Vector2(x, 0);
+
+        _rb.AddForce(input * Speed * Oscillator());
 
         // Check actions
         actionA = PlayerActions.ActionA.WasPressed;
@@ -66,17 +69,18 @@ public class PlayerController : MonoBehaviour {
         actionX = PlayerActions.ActionX.WasPressed;
         actionY = PlayerActions.ActionY.WasPressed;
 
-        //Dash:
+        //Jump
         if (actionA)
         {
-            if (Time.time - cooldown > 3.0f)
+            if (grounded)
             {
-                cooldown = Time.time;
-                _rb.AddForce(View.transform.up* 3.0f, ForceMode2D.Impulse);                
+                grounded = false;
+                _rb.AddForce(Vector2.up * Jump, ForceMode2D.Impulse);
             }
         }
-        
+
         //Does this work?
+        /*
         if (movement.magnitude > 0.1f)
         {
             View.transform.up = Filter.FIR3(View.transform.up, movement).normalized;            
@@ -85,6 +89,10 @@ public class PlayerController : MonoBehaviour {
         {
             View.transform.up = Filter.FIR3(View.transform.up, Vector2.up, 0.95f).normalized;                        
         }
+        */
+
+        //Jumping up is softer than falling down.
+        _rb.gravityScale = _rb.velocity.y > 0 ? 1 : FallFactor;
     }
 
     private float Oscillator()
@@ -125,6 +133,16 @@ public class PlayerController : MonoBehaviour {
             }
         }
         */
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        //If we hit something that is reasonably straight below us, we can jump again.
+        var direction = (Vector2) transform.position - other.contacts[0].point;
+        if (Vector2.Dot(direction, Vector2.up) > 0.5)
+        {
+            grounded = true;
+        }
     }
 
 }
