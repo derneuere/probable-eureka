@@ -7,7 +7,8 @@ using InControl;
 
 public class PlayerController : MonoBehaviour
 {
-
+    public AudioEvent JumpSound;
+    
     public const float Speed = 12.0f;
     public static readonly float[] Jump = {0, 15.0f, 10.0f};
     public const float JumpGravity = 3.0f;
@@ -57,6 +58,8 @@ public class PlayerController : MonoBehaviour
         {
             if (_jumped++ < 2)
             {
+                JumpSound.Play(GetComponent<AudioSource>());
+                
                 var vel2 = _rb.velocity;
                 if (vel2.y < 0)
                 {
