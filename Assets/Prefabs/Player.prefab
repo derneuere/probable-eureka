@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1883301332183760311}
   - component: {fileID: 8402638316673509482}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7254684776065851373}
   - component: {fileID: 3386862564714307486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 360_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 9012739951501950896}
   - component: {fileID: 9012739951501950897}
   - component: {fileID: 8038075166559700028}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -176,11 +176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d37f48701e43348a152f6f657c9bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {x: 0, y: 0}
-  actionA: 0
-  actionB: 0
-  actionX: 0
-  actionY: 0
   View: {fileID: 1883301332183760311}
 --- !u!50 &9012739951501950897
 Rigidbody2D:
