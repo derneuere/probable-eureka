@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D _rb;
     private int _jumped;
-    private float direction = 1;
     private float _runSpeed;
     private float _fallSpeed;
 
@@ -50,54 +49,60 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (PlayerActions == null) return;
-
         //Apply movement
-        var input = new Vector2(PlayerActions.Move.X, 0);
-        //_rb.AddForce(input * Speed *(_jumped == 0 ? 1.0f : AirControl));
+        Vector2 input;
+        if (PlayerActions != null)
+        {
+            input = new Vector2(PlayerActions.Move.X, 0);
+        }
 
         var vel = _rb.velocity;
-        vel.x = PlayerActions.Move.X * Speed * (_jumped==0 ? 1: AirControl);
-        _rb.velocity = Filter.FIR(_rb.velocity, vel, 0.8f);
-
-            
-        //Jump
-        if (PlayerActions.ActionA.WasPressed)
-        {
-            if (_jumped++ < 2)
-            {
-                JumpSound.Play(GetComponent<AudioSource>());
-                animator.SetTrigger("jump");
-                
-                var vel2 = _rb.velocity;
-                if (vel2.y < 0)
-                {
-                    vel2.y = 0;
-                }
-                vel2.y += Jump[_jumped];
-                
-                _rb.velocity = vel2;
-            }
-        }
-
-        //Jumping up is softer than falling down.
-        if (_jumped > 0)
-        {
-            _rb.gravityScale = _rb.velocity.y > 0 ? JumpGravity : FallGravity;            
-        }
-        else
-        {
-            _rb.gravityScale = JumpGravity;
-        }
         
-        //Apply directional scaling
-        if (Mathf.Sign(PlayerActions.Move.X) > 0)
+        if (PlayerActions != null)
         {
-            View.transform.localScale = new Vector3(1, 1, 1);
-        }
-        else if (Mathf.Sign(PlayerActions.Move.X) < 0)
-        {
-            View.transform.localScale = new Vector3(-1, 1, 1);
+            vel.x = PlayerActions.Move.X * Speed * (_jumped == 0 ? 1 : AirControl);
+            _rb.velocity = Filter.FIR(_rb.velocity, vel, 0.8f);
+
+
+            //Jump
+            if (PlayerActions.ActionA.WasPressed)
+            {
+                if (_jumped++ < 2)
+                {
+                    JumpSound.Play(GetComponent<AudioSource>());
+                    animator.SetTrigger("jump");
+
+                    var vel2 = _rb.velocity;
+                    if (vel2.y < 0)
+                    {
+                        vel2.y = 0;
+                    }
+
+                    vel2.y += Jump[_jumped];
+
+                    _rb.velocity = vel2;
+                }
+            }
+
+            //Jumping up is softer than falling down.
+            if (_jumped > 0)
+            {
+                _rb.gravityScale = _rb.velocity.y > 0 ? JumpGravity : FallGravity;
+            }
+            else
+            {
+                _rb.gravityScale = JumpGravity;
+            }
+
+            //Apply directional scaling
+            if (Mathf.Sign(PlayerActions.Move.X) > 0)
+            {
+                View.transform.localScale = new Vector3(1, 1, 1);
+            }
+            else if (Mathf.Sign(PlayerActions.Move.X) < 0)
+            {
+                View.transform.localScale = new Vector3(-1, 1, 1);
+            }
         }
 
         _runSpeed = Filter.FIR(_runSpeed, Mathf.Clamp01(_rb.velocity.magnitude / FullAnimSpeed));
