@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class scrGeschenk : MonoBehaviour
 {
-  
+
+
+   
     public AudioEvent destroysound;
     public GameObject view;
     public GameObject magicpoofGeschenk;
-    public GameManager temperaturAnderung;
+    private GameManager temperaturAnderung;
     // Start is called before the first frame update
+    private void Start()
+    {
+        temperaturAnderung = GameObject.FindObjectOfType<GameManager>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Players"))
