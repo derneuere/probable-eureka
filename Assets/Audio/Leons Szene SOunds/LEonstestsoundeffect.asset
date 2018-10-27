@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd306063f4abb643b10dddcab3b6bc4, type: 3}
   m_Name: LEonstestsoundeffect
   m_EditorClassIdentifier: 
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: 1bf916450937f47629dacb6c6ab4fbf6, type: 3}
   delay:
     minimum: 0
     maximum: 0
@@ -20,5 +21,5 @@ MonoBehaviour:
     minimum: 0.9
     maximum: 1
   pitch:
-    minimum: 0.9
-    maximum: 1.1
+    minimum: 0.775
+    maximum: 0.9750001
