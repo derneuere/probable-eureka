@@ -7,7 +7,7 @@ public class LifePoints : MonoBehaviour
 {
     public Image[] lives;
 
-    public void SetLife(int leben)
+    public void SetLife(float leben)
     {
         int i = 0;
         foreach(Image l in lives){

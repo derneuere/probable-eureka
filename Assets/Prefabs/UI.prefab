@@ -232,9 +232,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 257917322533456214}
+  - {fileID: 4848537314888190626}
+  - {fileID: 5865421372770692258}
+  - {fileID: 243581945943629070}
+  - {fileID: 1972358144381400701}
+  - {fileID: 4912959393825016049}
+  - {fileID: 4830998825485660562}
+  - {fileID: 3294545956793516328}
+  - {fileID: 2262517383865684962}
 --- !u!1 &4467948725497169587
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -40}
+  m_AnchoredPosition: {x: -25, y: -35}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1564090405570707828

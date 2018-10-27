@@ -8,9 +8,9 @@ public class DegreeUI : MonoBehaviour
 {
     public TMP_Text text;
 
-    public void SetDegree(int degree)
+    public void SetDegree(float degree)
     {
-        text.SetText("degree: " + degree);
+        text.SetText("Degree: " + System.Math.Round(degree, 2) + " °");
     }
     // Start is called before the first frame update
     void Start()
